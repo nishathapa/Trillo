@@ -1,0 +1,12 @@
+*~
+node_modules
+
+.npm
+.sass-cache
+*.css.map
+.settings/
+.vscode/
+
+logs
+*.log
+npm-debug.log*
