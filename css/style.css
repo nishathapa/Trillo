@@ -144,8 +144,7 @@ body {
   .user-nav__icon {
     height: 2.25rem;
     width: 2.25rem;
-    fill: var(--color-grey-dark-2);
-    position: relative; }
+    fill: var(--color-grey-dark-2); }
   .user-nav__notification {
     font-size: .8rem;
     height: 1.75em;
@@ -156,7 +155,6 @@ body {
     position: absolute;
     top: 1.5rem;
     right: 1.1rem;
-    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -236,7 +234,7 @@ body {
   .overview__location {
     font-size: 1.2rem;
     display: flex;
-    align-items: center; }
+    vertical-align: center; }
   .overview__icon-location {
     margin-right: .5rem; }
   .overview__rating {
@@ -312,7 +310,8 @@ body {
     -webkit-mask-image: url(../img/chevron-thin-right.svg);
     -webkit-mask-size: cover;
     mask-image: url(../img/chevron-thin-right.svg);
-    mask-size: cover; }
+    mask-size: cover;
+    background-image: none; }
 
 .recommend {
   font-size: 1.3rem;
@@ -321,6 +320,8 @@ body {
   display: flex; }
   .recommend__count {
     margin-right: auto; }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -336,7 +337,7 @@ body {
   padding: 3rem;
   margin-bottom: 3.5rem;
   position: relative;
-  overflow: relative; }
+  overflow: hidden; }
   .review__text {
     margin-bottom: 2rem;
     z-index: 10;
@@ -354,7 +355,8 @@ body {
   .review__user-name {
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-weight: 600; }
+    font-weight: 600;
+    margin-bottom: .4rem; }
   .review__user-date {
     font-size: 1rem;
     color: var(--color-grey-dark-3); }
@@ -372,3 +374,45 @@ body {
     color: var(--color-grey-light-2);
     font-family: sans-serif;
     z-index: 1; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__book-now {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem; }
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; }
+  .btn > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s; }
+  .btn__visible {
+    padding: 2rem 7.5rem; }
+  .btn__invisible {
+    padding: 2rem 0;
+    position: absolute;
+    left: 0;
+    top: -100%; }
+  .btn:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark)); }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  .btn:hover .btn__invisible {
+    top: 0; }
+  .btn:focus {
+    outline: none;
+    animation: pulsate 1s infinite; }
